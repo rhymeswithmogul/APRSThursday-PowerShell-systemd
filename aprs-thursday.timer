@@ -1,0 +1,12 @@
+[Unit]
+Description=Check into the #APRSThursday ham radio net.
+
+[Timer]
+OnCalendar=Thu *-*-* 00:00:00 Etc/UTC
+RandomizedDelaySec=23h
+Persistent=true
+Unit=aprs-thursday.service
+
+[Install]
+WantedBy=timers.target
+After=network.target

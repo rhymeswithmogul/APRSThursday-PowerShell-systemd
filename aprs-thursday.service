@@ -1,0 +1,11 @@
+[Unit]
+Description=Check into the #APRSThursday ham radio net.
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/Send-APRSThursdayCheckin.ps1
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+After=network.target
